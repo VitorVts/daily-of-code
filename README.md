@@ -1,8 +1,11 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=9e0b0f&height=150&section=header&text=Daily-of-code🧙‍♂️&fontSize=40&fontColor=ffffff" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=7b1113&height=150&section=header&text=php-of-ash⚔️&fontSize=40&fontColor=ffffff" />
 </div>
 
-<p align="center">Um grimório de exercícios diários em PHP, forjando habilidades nas sombras — estilo Soulslike. Aqui, cada linha de código é um passo mais perto da maestria.</p>
+<p align="center">
+  Repositório de batalhas diárias em PHP. Aqui cada exercício é um duelo, cada erro é um ferimento — e cada conquista, uma alma vencida. <br />
+  O caminho do guerreiro é forjado em código.
+</p>
 
 <br/>
 
@@ -12,18 +15,26 @@
 
 ---
 
-## 📚 Sobre
+## 🛠️ Sobre
 
-Este repositório é meu campo de treinamento, onde realizo exercícios diários em PHP com o objetivo de aprimorar lógica, estruturação e padrões de código — tudo isso envolvido por uma atmosfera inspirada nos jogos Soulslike.
+Este é meu campo de guerra digital. Aqui treino com espada em punho (teclado e terminal), vencendo bugs e dominando os fundamentos do PHP.  
+Um espaço para fortalecer a lógica, evoluir a estrutura e empunhar boas práticas com honra.
 
 > *"Em cada erro, uma nova fogueira de aprendizado."*
 
 ---
 
-## ⚔️ Projetos Relacionados
+## 🛡️ Missões Paralelas
 
-- **🔧 Os Gen 2** - Gerador de Ordem de Serviço para otimizar fluxo de trabalho.
-- **🧠 Plano Fit** - Criador de plano alimentar com inteligência artificial.
-- **📡 Plano Fit API** - Backend robusto do Plano Fit, escrito em PHP.
+- **⚙️ Os Gen 2** — Gerador de Ordem de Serviço pra acelerar as batalhas do dia a dia.
+- **🥗 Plano Fit** — IA criando planos alimentares sob medida.
+- **🧬 Plano Fit API** — Backend em PHP como escudo de sustentação.
 
 ---
+
+## 🗂️ Estrutura
+
+```bash
+Daily-of-code/
+├── Desafios/
+└── README.md
