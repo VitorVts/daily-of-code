@@ -2,8 +2,6 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=9e0b0f&height=150&section=header&text=Daily-of-code🧙‍♂️&fontSize=40&fontColor=ffffff" />
 </div>
 
-<h1 align="center">🛡️ Daily-of-code 🧙‍♂️</h1>
-
 <p align="center">Um grimório de exercícios diários em PHP, forjando habilidades nas sombras — estilo Soulslike. Aqui, cada linha de código é um passo mais perto da maestria.</p>
 
 <br/>
