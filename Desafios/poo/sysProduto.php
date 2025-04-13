@@ -1,9 +1,7 @@
 <?php
-
-class Produto {
-
+class Produto
+{
     public string $nome;
-    
     public float $preco;
 
     public function __construct(string $nome, float $preco)
@@ -20,9 +18,9 @@ class Produto {
 
 }
 
-class Estoque {
+class Estoque
+{
     public array $produtos = [];
-    
     public function adicionaProduto(Produto $produto)
     {
         $this->produtos[] = $produto;

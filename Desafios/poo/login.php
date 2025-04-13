@@ -1,27 +1,32 @@
 <?php
 
-class Usuario {
+class Usuario
+{
     private string $nome;
     private string $senhaHash;
-
-    public function __construct(string $nome, string $senha) {
+    public function __construct(string $nome, string $senha)
+    {
         $this->nome = $nome;
         $this->senhaHash = password_hash($senha, PASSWORD_DEFAULT);
     }
 
-    public function getNome(): string {
+    public function getNome(): string
+    {
         return $this->nome;
     }
 
-    public function verificarSenha(string $senha): bool {
+    public function verificarSenha(string $senha): bool
+    {
         return password_verify($senha, $this->senhaHash);
     }
 }
 
-class Sistema {
+class Sistema
+{
     private array $usuarios = [];
 
-    public function cadastrarUsuario(string $nome, string $senha): void {
+    public function cadastrarUsuario(string $nome, string $senha): void
+    {
         foreach ($this->usuarios as $usuario) {
             if ($usuario->getNome() === $nome) {
                 echo "Usuário já existe!\n";
@@ -34,7 +39,8 @@ class Sistema {
         echo "Usuário '$nome' cadastrado com sucesso!\n";
     }
 
-    public function fazerLogin(string $nome, string $senha): void {
+    public function fazerLogin(string $nome, string $senha): void
+    {
         foreach ($this->usuarios as $usuario) {
             if ($usuario->getNome() === $nome) {
                 if ($usuario->verificarSenha($senha)) {

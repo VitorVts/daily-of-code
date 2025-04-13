@@ -1,25 +1,28 @@
 <?php
 
-class Livros {
+class Livros
+{
     public string $titulo;
 
     public string $autor;
 
 
-    public function __construct(string $titulo, string $autor) {
+    public function __construct(string $titulo, string $autor)
+    {
         $this->titulo = $titulo;
         $this->autor = $autor;
     }
 }
-
-class Biblioteca {
+class Biblioteca
+{
     public array $biblioteca = [];
-    public function adicionarLivro(Livros $livro) {
+    public function adicionarLivro(Livros $livro): void
+    {
         $this->biblioteca[] = $livro;
     }
-    public function listarLivros(){
-        foreach ($this->biblioteca as $Livro)
-        {
+    public function listarLivros(): void
+    {
+        foreach ($this->biblioteca as $Livro) {
             echo "Título: {$Livro->titulo}, Autor: {$Livro->autor} \n";
         }
     }

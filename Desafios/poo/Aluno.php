@@ -10,23 +10,25 @@
 
 //     Método verificarAprovacao(): string
 //     (Aprovado se média ≥ 7) -->
-
-class Aluno {
-
+class Aluno
+{
     public string $nome;
 
     private array $notas = [];
 
-    public function __construct(string $nome, array $notas) {
+    public function __construct(string $nome, array $notas)
+    {
         $this->nome = $nome;
         $this->notas = $notas;
     }
 
-    public function adicionarNota(float $nota): void {
+    public function adicionarNota(float $nota): void
+    {
         $this->notas[] = $nota;
     }
 
-    public function calcularMedia(): float {
+    public function calcularMedia(): float
+    {
         if (count($this->notas) === 0) {
             return 0.0;
         }
@@ -34,15 +36,16 @@ class Aluno {
         return $soma / count($this->notas);
     }
 
-    public function verificarAprovacao(): string {
+    public function verificarAprovacao(): string
+    {
         $media = $this->calcularMedia();
         return $media >= 7 ? "Aprovado" : "Reprovado";
     }
 
-    public function exibirNotas(): void {
+    public function exibirNotas(): void
+    {
         echo "Notas: " . implode(", ", $this->notas) . "\n";
     }
-
 }
 
 

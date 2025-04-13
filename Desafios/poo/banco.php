@@ -11,31 +11,36 @@ class ContaBancaria {
         $this->saldo = $saldo;
     }
 
-    public function depositar(float $valor): void {
-        if ($valor <= 0){    
+    public function depositar(float $valor): void
+    {
+        if ($valor <= 0) {
             echo "Valor inválido para depósito.\n";
             return;
         }
         $this->saldo += $valor;
     }
-    
-    public function sacar(float $valor): void {
-        if ($valor <= 0 || $valor > $this->saldo){
+
+    public function sacar(float $valor): void
+    {
+        if ($valor <= 0 || $valor > $this->saldo) {
             echo "Valor inválido para saque.\n";
             return;
         }
         $this->saldo -= $valor;
     }
 
-    public function getSaldo(): float {
+    public function getSaldo(): float
+    {
         return $this->saldo;
     }
 
-    public function setTitular(string $titular): void {
+    public function setTitular(string $titular): void
+    {
         $this->titular = $titular;
     }
 
-    public function getTitular(): string {
+    public function getTitular(): string
+    {
         return $this->titular;
     }
 }
@@ -45,7 +50,7 @@ $conta->depositar(500.00);
 $conta->sacar(200);
 echo "Saldo atual: " . $conta->getSaldo() . "\n";
 
-$conta->sacar(1500.00); 
+$conta->sacar(1500.00);
 $conta->setTitular("Lucas");
 
 echo "Titular da conta: " . $conta->getTitular() . "\n";

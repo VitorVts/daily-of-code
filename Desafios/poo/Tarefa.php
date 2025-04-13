@@ -13,54 +13,50 @@
 //     Adiciona várias Tarefas
 
 //     Lista todas com listarTarefas() -->
-
-class Tarefa {
-
+class Tarefa
+{
     public string $titulo;
-
     public string $descricao;
-
     private string $status ;
-
-    public function __construct(string $titulo, string $descricao, string $status = "pendente"){
+    public function __construct(string $titulo, string $descricao, string $status = "pendente")
+    {
         $this->titulo = $titulo;
         $this->descricao = $descricao;
         $this->status = $status;
     }
 
-    public function concluir(): void{
+    public function concluir(): void
+    {
         $this->status = "Concluído";
     }
 
-    public function exibirDetalhes(): void{
-        echo "Título: " . $this->titulo ."\n";
-        echo "Descrição: " . $this->descricao ."\n";
-        echo "Status: " . $this->status ."\n";
+    public function exibirDetalhes(): void
+    {
+        echo "Título: " . $this->titulo . "\n";
+        echo "Descrição: " . $this->descricao . "\n";
+        echo "Status: " . $this->status . "\n";
     }
-
-
 }
 
-class ListadeTarefas{
+class ListadeTarefas
+{
     public array $tarefas = [];
-
-    
-    public function adicionarTarefa($tarefa){
+    public function adicionarTarefa($tarefa): void
+    {
         $this->tarefas[] = $tarefa;
     }
 
-    public function listarTarefa() {
-        foreach($this->tarefas as $tarefa)
-        {
+    public function listarTarefa(): void
+    {
+        foreach ($this->tarefas as $tarefa) {
             $tarefa->exibirDetalhes() . "\n";
         }
     }
-
 }
 
 $ListaTarefa = new ListadeTarefas();
 
-$tarefa1 = new Tarefa("Quarto","Arrumar o quarto ");
+$tarefa1 = new Tarefa("Quarto", "Arrumar o quarto ");
 
 
 $ListaTarefa->adicionarTarefa($tarefa1);
