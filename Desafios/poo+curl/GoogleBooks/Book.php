@@ -2,7 +2,7 @@
 
 require_once 'GoogleBooksClient.php';
 
-class Book 
+class Book
 {
     public string $title;
     public array $authors = [];
@@ -19,4 +19,3 @@ class Book
         echo sprintf('Título: %s | Autores: %s', $this->title, $autoresFormatados) . PHP_EOL;
     }
 }
-

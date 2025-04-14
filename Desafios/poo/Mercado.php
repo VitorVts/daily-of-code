@@ -64,7 +64,7 @@ class Carrinho
 
         return $this->total;
     }
-
+    
     public function listarItens():void
     {
         foreach($this->itensCarrinho as $item) {

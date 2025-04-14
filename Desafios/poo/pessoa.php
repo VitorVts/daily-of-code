@@ -1,38 +1,54 @@
-<?php
-// 🚀 1. Classe Pessoa com métodos simples
 
-// Crie uma classe Pessoa com os atributos:
+<?php 
 
-//     nome
+/* CLASSE PESSOA "NOME", "SOBRENOME", "IDADE", idade não pode sermenor que 0 e nome tem que vir nome e sobrenome quando necesasrio atributos privados */
 
-//     idade
-
-// E métodos:
-
-//     falar(): que retorna "Olá, meu nome é {nome} e tenho {idade} anos."
-
-// ✅ Objetivos:
-
-//     Criar classes e métodos
-
-//     Trabalhar com construtores e atributos
 class Pessoa
 {
-    public string $nome;
-    public int $idade;
+   protected string $nome;
+   protected string $sobrenome;
+   private int $idade;
 
-    public function __construct(string $nome, int $idade)
-    {
-        $this->nome = $nome;
-        $this->idade = $idade;
-    }
+   public function __construct(string $nome, string $sobrenome, int $idade)
+   {
+    $this->nome = $nome;
+    $this->sobrenome = $sobrenome;
+    $this->idade = $this->validateIdade($idade);
+   }
 
-    public function falar(): void
-    {
-        echo "Olá, meu nome é {$this->nome} e eu tenho {$this->idade} anos.";
+   public function validateIdade(int $idade): int
+   {
+    if ($idade < 0) {
+        throw new ErrorException("A idade deve ser maior que 0");
     }
+    return $idade;
+   }
+
+   public function getFullName(): string
+   {
+    return sprintf("%s %s",$this->nome, $this->sobrenome);
+   }
 }
 
-$pessoa = new Pessoa("Vitor", 25);
+class Funcionario extends Pessoa
+{
+    private string $cargo;
 
-$pessoa->falar();
+    public function __construct(string $nome, string $sobrenome, int $idade, string $cargo)
+    {
+        parent::__construct($nome,$sobrenome,$idade);
+        $this->cargo = $cargo;
+    }
+    public function getCargo(): string
+    {
+        echo $this->nome;
+        echo $this->sobrenome;
+        return $this->cargo;
+    }
+
+}
+
+$func1 = new Funcionario("Vitor","Gomes",25,"Desempregado");
+
+
+echo $func1->getCargo();
