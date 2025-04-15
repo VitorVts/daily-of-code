@@ -45,4 +45,3 @@ class Gerente extends FuncionarioDev
 $vitor = new Programador("Vitor" , "php");
 
 $joana = new Gerente("Joana","TI");
-

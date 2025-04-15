@@ -1,0 +1,15 @@
+{
+    "name": "vitor/app",
+    "autoload": {
+        "psr-4": {
+            "Vitor\\App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VitorVts",
+            "email": "vitorgguimaraes56@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . "App/Servicos/Mensagem.php";
+require "autoload.php";
 
 use App\Servicos\Mensagem;
 
