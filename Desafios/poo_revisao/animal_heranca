@@ -1,0 +1,33 @@
+<?php
+
+class Animal
+{
+  public function falar(): void
+  {
+    echo "Som genérico" . PHP_EOL;
+  }
+}
+
+class Cachorro extends Animal
+{
+  public function falar(): void
+  {
+    echo "Au Au" . PHP_EOL;
+  }
+}
+
+class Gato extends Animal
+{
+  public function falar(): void
+  {
+    echo "Miau" . PHP_EOL;
+  }
+}
+
+$animal = new Animal();
+$cachorro = new Cachorro();
+
+$animal->falar();
+$cachorro->falar();
+$gato = new Gato();
+$gato->falar();
